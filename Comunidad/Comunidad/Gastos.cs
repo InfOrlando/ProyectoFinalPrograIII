@@ -7,19 +7,35 @@ using System.Threading.Tasks;
 namespace Comunidad
 {
     class Gastos:AtributosComunes
+        
     {
-        private string _TipoDeReparto;
 
-        public string TipoDeReparto
+        private double _Importe;
+        private string _TipoZonaReparto;
+
+        public double Importe
         {
             get
             {
-                return _TipoDeReparto;
+                return _Importe;
             }
 
             set
             {
-                _TipoDeReparto = value;
+                _Importe = value;
+            }
+        }
+
+        public string TipoZonaReparto
+        {
+            get
+            {
+                return _TipoZonaReparto;
+            }
+
+            set
+            {
+                _TipoZonaReparto = value;
             }
         }
     }

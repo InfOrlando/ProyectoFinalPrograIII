@@ -72,6 +72,7 @@
       <DependentUpon>FrmPropietario.cs</DependentUpon>
     </Compile>
     <Compile Include="Gastos.cs" />
+    <Compile Include="GastosPorZona.cs" />
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +87,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Propiedades.cs" />
     <Compile Include="Propietario.cs" />
     <EmbeddedResource Include="FrmComunidad.resx">
       <DependentUpon>FrmComunidad.cs</DependentUpon>
