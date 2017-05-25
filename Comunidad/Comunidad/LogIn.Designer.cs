@@ -1,6 +1,6 @@
 ﻿namespace Comunidad
 {
-    partial class Form1
+    partial class LogIn
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 448);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "LogIn";
             this.ResumeLayout(false);
 
         }
