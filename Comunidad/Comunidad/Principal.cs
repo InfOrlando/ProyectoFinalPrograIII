@@ -72,5 +72,22 @@ namespace Comunidad
             listas.Show();
 
         }
+
+        private void btnNuevoTipoDePropiedades_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmTipoDePorpiedad tipoPropiedad = new FrmTipoDePorpiedad();
+            tipoPropiedad.ShowDialog();
+        }
+
+        private void btnListadoTipoPropiedades_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+
+            FrmListas listas = new FrmListas();
+            listas.mostrarDatosTipoPropiedad();
+            listas.lblTitulo.Text = "Tipos de Propiedad";
+            listas.MdiParent = this;
+            listas.Show();
+        }
     }
 }

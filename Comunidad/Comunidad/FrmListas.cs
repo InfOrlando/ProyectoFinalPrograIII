@@ -16,6 +16,7 @@ namespace Comunidad
         List<Comunidad> comunidades = new List<Comunidad>();
         List<Propietario> propietarios = new List<Propietario>();
         List<GastosPorZona> GastosxZona = new List<GastosPorZona>();
+        List<TipoDePropiedad> TipoDePropiedades = new List<TipoDePropiedad>();
 
 
         public FrmListas()
@@ -127,6 +128,41 @@ namespace Comunidad
 
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = GastosxZona;
+            dataGridView1.Refresh();
+
+
+
+        }
+
+
+        public void mostrarDatosTipoPropiedad()
+        {
+            string nombrearchivo = "C:\\Users\\Orlando Perez\\Source\\Repos\\ProyectoFinalPrograIII\\Comunidad\\Comunidad\\bin\\Debug\\TipoDePropiedad.txt";
+
+
+            FileStream stream = new FileStream(nombrearchivo, FileMode.Open, FileAccess.Read);
+            StreamReader leer = new StreamReader(stream);
+
+
+
+            while (leer.Peek() > -1)
+            {
+                TipoDePropiedad tipoDePropiedad = new TipoDePropiedad();
+                tipoDePropiedad.Identificacion = leer.ReadLine();
+                tipoDePropiedad.Nombre = leer.ReadLine();
+
+                TipoDePropiedades.Add(tipoDePropiedad);
+
+
+              
+
+
+            }
+            //Cerrar el archivo
+            leer.Close();
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = TipoDePropiedades;
             dataGridView1.Refresh();
 
 

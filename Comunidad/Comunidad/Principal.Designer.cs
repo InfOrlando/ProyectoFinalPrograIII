@@ -39,12 +39,15 @@
             this.btnNuevo = new DevExpress.XtraBars.BarButtonItem();
             this.btnNuevaPropiedad = new DevExpress.XtraBars.BarButtonItem();
             this.btnNuevoPropietario = new DevExpress.XtraBars.BarButtonItem();
+            this.btnListadoTipoPropiedades = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNuevoTipoDePropiedades = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -66,9 +69,11 @@
             this.btnNuevaComunidad,
             this.btnNuevo,
             this.btnNuevaPropiedad,
-            this.btnNuevoPropietario});
+            this.btnNuevoPropietario,
+            this.btnListadoTipoPropiedades,
+            this.btnNuevoTipoDePropiedades});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 9;
+            this.ribbon.MaxItemId = 11;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -149,6 +154,24 @@
             this.btnNuevoPropietario.Name = "btnNuevoPropietario";
             this.btnNuevoPropietario.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevoPropietario_ItemClick);
             // 
+            // btnListadoTipoPropiedades
+            // 
+            this.btnListadoTipoPropiedades.Caption = "Listado";
+            this.btnListadoTipoPropiedades.Glyph = ((System.Drawing.Image)(resources.GetObject("btnListadoTipoPropiedades.Glyph")));
+            this.btnListadoTipoPropiedades.Id = 9;
+            this.btnListadoTipoPropiedades.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnListadoTipoPropiedades.LargeGlyph")));
+            this.btnListadoTipoPropiedades.Name = "btnListadoTipoPropiedades";
+            this.btnListadoTipoPropiedades.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListadoTipoPropiedades_ItemClick);
+            // 
+            // btnNuevoTipoDePropiedades
+            // 
+            this.btnNuevoTipoDePropiedades.Caption = "Nuevo";
+            this.btnNuevoTipoDePropiedades.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNuevoTipoDePropiedades.Glyph")));
+            this.btnNuevoTipoDePropiedades.Id = 10;
+            this.btnNuevoTipoDePropiedades.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNuevoTipoDePropiedades.LargeGlyph")));
+            this.btnNuevoTipoDePropiedades.Name = "btnNuevoTipoDePropiedades";
+            this.btnNuevoTipoDePropiedades.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevoTipoDePropiedades_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -182,7 +205,8 @@
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup5});
             this.ribbonPage3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage3.Image")));
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "Propiedades";
@@ -192,7 +216,14 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.btnListadoPropiedades);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnNuevaPropiedad);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Listado";
+            this.ribbonPageGroup3.Text = "Propiedades";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnListadoTipoPropiedades);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnNuevoTipoDePropiedades);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Tipos de Propiedades";
             // 
             // ribbonPage4
             // 
@@ -207,7 +238,7 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.btnListadoPropietario);
             this.ribbonPageGroup4.ItemLinks.Add(this.btnNuevoPropietario);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Listado";
+            this.ribbonPageGroup4.Text = "Propietario";
             // 
             // ribbonStatusBar
             // 
@@ -270,5 +301,8 @@
         private DevExpress.XtraBars.BarButtonItem btnNuevaPropiedad;
         private DevExpress.XtraBars.BarButtonItem btnNuevoPropietario;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem btnListadoTipoPropiedades;
+        private DevExpress.XtraBars.BarButtonItem btnNuevoTipoDePropiedades;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
     }
 }
