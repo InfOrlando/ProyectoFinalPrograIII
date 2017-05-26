@@ -40,5 +40,37 @@ namespace Comunidad
             FrmPropietario frm = new FrmPropietario();
             frm.ShowDialog();
         }
+
+        private void btnListadoComunidad_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmListas listas = new FrmListas();
+            listas.mostrarDatosComunidad();
+            listas.lblTitulo.Text = "Comunidad";
+            listas.MdiParent = this;
+            listas.Show();
+            
+        }
+
+        private void btnListadoPropietario_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            FrmListas listas = new FrmListas();
+            listas.mostrarDatosPropietario();
+            listas.lblTitulo.Text = "Propietario";
+            listas.MdiParent = this;
+            listas.Show();
+
+        }
+
+        private void btnListadoGastos_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            FrmListas listas = new FrmListas();
+            listas.mostrarDatosGastosXZona();
+            listas.lblTitulo.Text = "Gastos por Zona";
+            listas.MdiParent = this;
+            listas.Show();
+
+        }
     }
 }

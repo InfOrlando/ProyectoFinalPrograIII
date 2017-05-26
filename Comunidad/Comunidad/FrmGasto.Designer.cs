@@ -118,17 +118,19 @@
             this.simpleButton2.Size = new System.Drawing.Size(156, 65);
             this.simpleButton2.TabIndex = 8;
             this.simpleButton2.Text = "Cancelar";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // cmTipo
             // 
             this.cmTipo.FormattingEnabled = true;
             this.cmTipo.Items.AddRange(new object[] {
-            "Proporcional",
-            "Igualatario"});
+            "P",
+            "I"});
             this.cmTipo.Location = new System.Drawing.Point(356, 226);
             this.cmTipo.Name = "cmTipo";
             this.cmTipo.Size = new System.Drawing.Size(302, 24);
             this.cmTipo.TabIndex = 9;
+            this.cmTipo.Text = "P";
             // 
             // FrmGasto
             // 
