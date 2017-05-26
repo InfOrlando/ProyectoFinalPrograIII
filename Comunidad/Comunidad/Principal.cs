@@ -17,5 +17,28 @@ namespace Comunidad
         {
             InitializeComponent();
         }
+
+        private void btnNuevaComunidad_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmComunidad frm = new FrmComunidad();
+            frm.ShowDialog();
+        }
+
+        private void btnNuevo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmGasto frm = new FrmGasto();
+            frm.ShowDialog();
+        }
+
+        private void btnNuevaPropiedad_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void btnNuevoPropietario_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmPropietario frm = new FrmPropietario();
+            frm.ShowDialog();
+        }
     }
 }
